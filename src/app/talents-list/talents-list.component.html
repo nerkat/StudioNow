@@ -1,19 +1,19 @@
 <div class="container">
     <div class="row">
+
         <div class="col-sm">
-            <div class="card mb-3" *ngFor="let talent of talents">
-                <div class="row no-gutters">
-                    <div class="col-md-4">
+            <div class="card mb-3 talent-card" *ngFor="let talent of talents" [class.selected]="talent === selectedTalent"
+                (click)="onSelect(talent)">
+                <div class="card-body d-flex">
+                    <div class="pr-4">
                         <img src="{{talent.image}}" class="card-img" alt="...">
                     </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <span>{{talent.plan}}</span>
+                    <div class="flex-grow-1">
+                            <span class="badge badge-{{talent.plan | plan2color}}">{{talent.plan}}</span>
                             <h5 class="card-title">{{talent.name}}</h5>
                             <p class="card-text">{{talent.title}}</p>
                             <p class="card-text"><small class="text-muted">{{talent.lastProject}}</small></p>
                             <a href="{{talent.about.portfolio}}">View Website</a>
-                        </div>
                     </div>
                 </div>
                 <div class="card-footer text-muted row no-gutters">
@@ -21,7 +21,74 @@
                 </div>
             </div>
         </div>
+
         <div class="col-sm">
+            <div class="card" *ngIf="selectedTalent">
+                <div class="row no-gutters">
+                    <div class="col-md-3">
+                        <img src="{{selectedTalent.image}}" class="card-img" alt="...">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card-body">
+                            <span class="badge badge-{{selectedTalent.plan | plan2color}}">{{selectedTalent.plan}}</span>
+                            <h5 class="card-title">{{selectedTalent.name}}</h5>
+                            <p class="card-text">{{selectedTalent.title}}</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <button type="button" class="btn btn-success">Send Proposal</button>
+                    </div>
+                </div>
+                <nav ngbNav #nav="ngbNav" class="nav-tabs">
+                    <ng-container ngbNavItem>
+                        <a ngbNavLink>About</a>
+                        <ng-template ngbNavContent>
+                            <dl class="row">
+                                <dt class="col-sm-3">Portfolio</dt>
+                                <dt class="col-sm-9"><a
+                                        href="{{selectedTalent.about.portfolio}}">{{selectedTalent.about.portfolio}}</a>
+                                </dt>
+
+                                <dt class="col-sm-3">Email</dt>
+                                <dt class="col-sm-9"><a
+                                        href="mailto:{{selectedTalent.about.email}}">{{selectedTalent.about.email}}</a>
+                                </dt>
+
+                                <dt class="col-sm-3">Phone</dt>
+                                <dt class="col-sm-9">{{selectedTalent.about.phone}}</dt>
+
+                                <dt class="col-sm-3">Location</dt>
+                                <dt class="col-sm-9">{{selectedTalent.about.location}}</dt>
+
+                            </dl>
+                            <div>
+                                Skills: <span class="badge badge-light"
+                                    *ngFor="let skill of selectedTalent.skills">{{skill}}</span>
+                            </div>
+                            <div>
+                                Experience: <span class="badge badge-light"
+                                    *ngFor="let client of selectedTalent.experience">{{client}}</span>
+                            </div>
+                        </ng-template>
+                    </ng-container>
+                    <ng-container ngbNavItem>
+                        <a ngbNavLink>Producer Notes</a>
+                        <ng-template ngbNavContent>
+                            <div *ngFor="let note of selectedTalent.producerNotes">
+                                {{note.name}}<br>
+                                {{note.date}}<br>
+                                {{note.text}}<br><br>
+                            </div>
+                            <button type="button" class="btn btn-info">Add Note</button>
+
+                        </ng-template>
+                    </ng-container>
+                </nav>
+
+                <div [ngbNavOutlet]="nav" class="mt-2"></div>
+
+            </div>
         </div>
+
     </div>
 </div>
