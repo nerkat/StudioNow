@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+            <div class="card mb-3" *ngFor="let talent of talents">
+                <div class="row no-gutters">
+                    <div class="col-md-4">
+                        <img src="{{talent.image}}" class="card-img" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <span>{{talent.plan}}</span>
+                            <h5 class="card-title">{{talent.name}}</h5>
+                            <p class="card-text">{{talent.title}}</p>
+                            <p class="card-text"><small class="text-muted">{{talent.lastProject}}</small></p>
+                            <a href="{{talent.about.portfolio}}">View Website</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer text-muted row no-gutters">
+                    Main Clients: <span *ngFor="let client of talent.experience">{{client}}</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm">
+        </div>
+    </div>
+</div>
