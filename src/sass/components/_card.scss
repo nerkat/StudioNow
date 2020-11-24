@@ -1,0 +1,16 @@
+.card {
+  &.selected {
+    overflow: hidden;
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: auto;
+      bottom: 0;
+      background-color: $primary;
+      width: 6px;
+    }
+  }
+}

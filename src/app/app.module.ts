@@ -12,8 +12,7 @@ import { brand2logo } from './pipes/brand2logo.pipe';
   declarations: [
     AppComponent,
     TalentsListComponent,
-    plan2color,
-    brand2logo
+    plan2color
   ],
   imports: [
     BrowserModule,

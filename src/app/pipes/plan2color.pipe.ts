@@ -5,9 +5,9 @@ export class plan2color implements PipeTransform {
     transform(value: string, exponent?: string): string {
         switch (value) {
             case 'Premium':
-                return 'primary'
+                return 'info'
             case 'Pro':
-                return 'secondary'
+                return 'warning'
             case 'Basic':
                 return 'danger'
             default:

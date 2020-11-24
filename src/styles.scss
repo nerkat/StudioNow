@@ -1,4 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 
+// base
+@import 'sass/base/variables';
+
+// components
+@import 'sass/components/card';
+
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
