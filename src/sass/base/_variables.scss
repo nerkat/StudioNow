@@ -17,6 +17,19 @@ $body-color: #222222;
 // fonts
 $font-family-sans-serif: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans",
   sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-size-sm: 14px;
+$font-size-xs: 12px;
+
+$font-weight-normal: 500;
+
+// font size helpers
+.font-size-sm{
+ font-size: $font-size-sm !important;
+}
+
+.font-size-xs{
+  font-size: $font-size-xs !important;
+ }
 
 // container sizes trough breakpoints
 $container-max-widths: (
@@ -50,6 +63,4 @@ $border-radius: 3px;
 $border-radius-lg: 4px;
 $border-radius-sm: 2px;
 
-$badge-border-radius: $border-radius-sm;
 
-$btn-border-radius: 5px;

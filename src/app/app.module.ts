@@ -7,15 +7,18 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { TalentsListComponent } from './talents-list/talents-list.component';
 import { plan2color } from './pipes/plan2color.pipe';
 import { brand2logo } from './pipes/brand2logo.pipe';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     TalentsListComponent,
-    plan2color
+    plan2color,
+    brand2logo
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     NgbModule
   ],

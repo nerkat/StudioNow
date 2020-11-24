@@ -10,31 +10,38 @@
 <div class="container">
     <div class="row">
 
-        <div class="col-sm">
+        <div class="col">
             <div class="card mb-30 rounded-lg" *ngFor="let talent of talents"
                 [class.selected]="talent === selectedTalent" (click)="onSelect(talent)">
-                <div class="card-body row">
+                <div class="card-body pb-16 row">
                     <div class="col-2 pr-0 ml-5">
                         <img src="{{talent.image}}" class="card-img" alt="...">
                     </div>
-                    <div class="col">
-                        <span class="badge text-white badge-{{talent.plan | plan2color}}">{{talent.plan}}</span>
-                        <strong class="card-title">{{talent.name}}</strong>
+                    <div class="col align-items-start d-flex flex-column">
+                        <span
+                            class="badge text-white mt-4 mb-8 badge-{{talent.plan | plan2color}}">{{talent.plan}}</span>
+                        <strong class="card-title mb-0">{{talent.name}}</strong>
                         <strong class="card-text text-muted">{{talent.title}}</strong>
                     </div>
                     <div class="col d-flex flex-column justify-content-between align-items-end">
-                        <small class="card-text">Last Project: <span class="text-muted">{{talent.lastProject}}</span></small>
+                        <span class="card-text font-size-xs">Last Project: <span
+                                class="text-muted">{{talent.lastProject}}</span></span>
                         <a href="{{talent.about.portfolio}}">View Website</a>
                     </div>
                 </div>
-                <div class="card-footer text-muted row no-gutters">
-                    Main Clients: <span class="badge badge-light" *ngFor="let client of talent.experience">{{client}} |
+                <div class="card-footer text-muted d-flex align-items-center font-size-sm p-2 pl-24">
+                    <span>Main Clients:</span>
+                    <span class="badge badge-light ml-11"
+                        *ngFor="let client of talent.experience | slice:0:3; first as isFirst">
+                        <span *ngIf="!isFirst" class="mr-16">|</span>
+                        <img width="30px" src="assets/images/{{client | brand2logo }}.png" />
+                        {{client}}
                     </span>
                 </div>
             </div>
         </div>
 
-        <div class="col-sm">
+        <div class="col">
             <div class="card" *ngIf="selectedTalent">
                 <div class="card-body row no-gutters">
                     <div class="col-md-3">
@@ -80,7 +87,9 @@
                             <hr />
                             <div>
                                 Experience: <span class="badge badge-light"
-                                    *ngFor="let client of selectedTalent.experience">{{client}} | </span>
+                                    *ngFor="let client of selectedTalent.experience">
+                                    <img width="30px" src="assets/images/{{client | brand2logo }}.png" />
+                                    {{client}} | </span>
                             </div>
                         </ng-template>
                     </ng-container>
