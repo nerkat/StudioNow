@@ -1,17 +1,17 @@
 <nav class="navbar bg-white mb-30 shadow-smt py-25">
-  <div class="container px-30">
+  <div class="container px-lg-30">
     <div class="d-flex form-inline justify-content-between w-100">
       <div class="icon-input align-items-center d-flex col-lg-7 col p-0">
         <bi name="Search"></bi>
         <input (selectItem)="selectedItem($event.item)" [resultTemplate]="rt" type="text" [inputFormatter]="format"
-          class="form-control py-22 pr-25 pl-60 w-100 m-sm-15" [ngbTypeahead]="search" placeholder="Search" />
+          class="form-control py-22 pr-25 pl-60 w-100" [ngbTypeahead]="search" placeholder="Search" />
         <ng-template #rt let-talent="result" let-t="term">
-          <div class="d-flex justify-content-between">
+          <div class="d-flex justify-content-between py-10">
             <div>
               <img width="40px" src="{{talent.image}}" class="mr-20">
               <ngb-highlight [result]="talent.name" [term]="t"></ngb-highlight>
             </div>
-            <div>
+            <div class="d-flex align-items-center">
               <span class="mr-3" *ngFor="let client of talent.experience | slice:0:3; first as isFirst">
                 <img width="24px" src="assets/images/{{client | brand2logo }}.png" />
               </span>
@@ -19,7 +19,7 @@
           </div>
         </ng-template>
       </div>
-      <button class="btn btn-outline-secondary my-2 text-dark" (click)="toggleSidebar()">
+      <button class="btn btn-outline-secondary ml-15 text-dark" (click)="toggleSidebar()">
         <bi name="Toggles"></bi>
         <span class="d-none d-lg-inline">Filters</span>
       </button>
