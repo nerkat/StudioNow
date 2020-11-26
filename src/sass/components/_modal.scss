@@ -1,0 +1,23 @@
+$btn-border-radius: 5px;
+$btn-padding-y: 12px;
+$btn-padding-x: 22px;
+$btn-font-size: $font-size-sm;
+.btn-primary {
+    border: 0 !important;
+    @extend .text-primary;
+    background-color: rgba($primary, 0.1) !important;
+    &:hover {
+        background-color: rgba($primary, 0.3) !important;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .modal-dialog {
+        margin: 0 !important;
+        .modal-content {
+            height: 100vh;
+            border: 0;
+            border-radius: 0;
+        }
+    }
+}

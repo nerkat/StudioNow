@@ -14,6 +14,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { IconsModule } from './icons/icons.module';
 import { SidebarModule } from 'ng-sidebar';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { NotesModalComponent } from './components/modals/notes-modal/notes-modal.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     TalentCardComponent,
     TalentDetailsComponent,
     HeaderComponent,
-    SidebarComponent
+    SidebarComponent,
+    NotesModalComponent
   ],
   imports: [
     BrowserModule,

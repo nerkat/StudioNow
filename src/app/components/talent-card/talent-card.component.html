@@ -24,7 +24,7 @@
     </div>
     <div class="card-footer text-muted align-items-center font-size-sm p-2 pl-24 d-none d-lg-block">
         <span>Main Clients:</span>
-        <span class="badge badge-light ml-11" *ngFor="let client of talent.experience | slice:0:3; first as isFirst">
+        <span class="badge badge-light ml-11 text-muted" *ngFor="let client of talent.experience | slice:0:3; first as isFirst">
             <span *ngIf="!isFirst" class="mr-16">|</span>
             <img width="30px" src="assets/images/{{client | brand2logo }}.png" />
             {{client}}
