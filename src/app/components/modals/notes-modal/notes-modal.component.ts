@@ -14,8 +14,8 @@ export class NotesModalComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  close = function (note) {
-      this.talent.producerNotes.push({
+  close(note) {
+    this.talent.producerNotes.push({
       name: 'Some User',
       date: '6/27/20',
       text: note

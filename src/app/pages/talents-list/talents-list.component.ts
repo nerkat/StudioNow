@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TALENTS } from '../../data/mock-data';
 import { HttpClient } from '@angular/common/http';
+import { TalentService } from 'src/app/data/talent.service';
 
 @Component({
   selector: 'app-talents-list',
@@ -15,12 +16,10 @@ export class TalentsListComponent implements OnInit {
   selectedTalent;
 
   onSelect(talent): void {
-    this.selectedTalent = talent;
+    this.talentService.selectedTalent = talent;
   }
 
-
-
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, public talentService: TalentService) { }
 
   ngOnInit(): void {
 

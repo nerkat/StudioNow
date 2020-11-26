@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { TalentService } from 'src/app/data/talent.service';
 
 @Component({
   selector: 'app-talent-card',
@@ -8,9 +9,8 @@ import { Component, Input, OnInit } from '@angular/core';
 export class TalentCardComponent implements OnInit {
 
   @Input() talent;
-  @Input() selectedTalent;
 
-  constructor() { }
+  constructor(public talentService: TalentService) { }
 
   ngOnInit(): void {
   }

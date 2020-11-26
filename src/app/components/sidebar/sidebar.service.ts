@@ -7,7 +7,7 @@ export class SidebarService {
 
   isOpen: boolean = false;
 
-  toggle = function () {
+  toggle() {
     this.isOpen = !this.isOpen;
   }
 
