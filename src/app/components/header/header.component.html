@@ -1,4 +1,4 @@
-<nav class="navbar bg-white mb-30 shadow-smt py-25">
+<nav class="bg-white mb-15 mb-lg-30 navbar py-25 shadow-smt">
   <div class="container px-lg-30">
     <div class="d-flex form-inline justify-content-between w-100">
       <div class="icon-input align-items-center d-flex col-lg-7 col p-0">
@@ -11,7 +11,7 @@
               <img width="40px" src="{{talent.image}}" class="mr-20">
               <ngb-highlight [result]="talent.name" [term]="t"></ngb-highlight>
             </div>
-            <div class="d-flex align-items-center">
+            <div class="align-items-center d-none d-md-flex">
               <span class="mr-3" *ngFor="let client of talent.experience | slice:0:3; first as isFirst">
                 <img width="24px" src="assets/images/{{client | brand2logo }}.png" />
               </span>
