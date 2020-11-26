@@ -2,6 +2,12 @@ $btn-border-radius: 5px;
 $btn-padding-y: 12px;
 $btn-padding-x: 22px;
 $btn-font-size: $font-size-sm;
+
+.btn{
+    display: flex !important;
+    align-items: center;
+}
+
 .btn-primary {
     border: 0 !important;
     @extend .text-primary;

@@ -2,9 +2,9 @@
   <div class="container px-lg-30">
     <div class="d-flex form-inline justify-content-between w-100">
       <div class="icon-input align-items-center d-flex col-lg-7 col p-0">
-        <bi name="Search"></bi>
+        <svg-icon src="assets/icons/search.svg" [svgStyle]="{ 'width.px':24 }"></svg-icon>
         <input (selectItem)="selectedItem($event.item)" [resultTemplate]="rt" type="text" [inputFormatter]="format"
-          class="form-control py-22 pr-25 pl-60 w-100" [ngbTypeahead]="search" placeholder="Search" />
+          class="form-control py-22 pr-25 w-100" [ngbTypeahead]="search" placeholder="Search" />
         <ng-template #rt let-talent="result" let-t="term">
           <div class="d-flex justify-content-between py-10">
             <div>
@@ -20,8 +20,8 @@
         </ng-template>
       </div>
       <button class="btn btn-outline-secondary ml-15 text-dark" (click)="toggleSidebar()">
-        <bi name="Toggles"></bi>
-        <span class="d-none d-lg-inline">Filters</span>
+        <svg-icon src="assets/icons/filters.svg" [svgStyle]="{ 'width.px':20 }"></svg-icon>
+        <span class="d-none d-lg-inline ml-10">Filters</span>
       </button>
     </div>
   </div>

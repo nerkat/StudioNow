@@ -11,10 +11,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { TalentCardComponent } from './components/talent-card/talent-card.component';
 import { TalentDetailsComponent } from './components/talent-details/talent-details.component';
 import { HeaderComponent } from './components/header/header.component';
-import { IconsModule } from './icons/icons.module';
 import { SidebarModule } from 'ng-sidebar';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { NotesModalComponent } from './components/modals/notes-modal/notes-modal.component';
+import { AngularSvgIconModule } from 'angular-svg-icon';
 
 @NgModule({
   declarations: [
@@ -32,9 +32,9 @@ import { NotesModalComponent } from './components/modals/notes-modal/notes-modal
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    IconsModule,
     SidebarModule,
-    NgbModule
+    NgbModule,
+    AngularSvgIconModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

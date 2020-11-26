@@ -12,8 +12,8 @@
         <div class="modal-content border-0 h-100">
             <div>
                 <button type="button" class="btn shadow-none" (click)="talentService.selectedTalent=null">
-                    <bi name="chevron-left"></bi>
-                    back
+                    <svg-icon src="assets/icons/dash-left.svg" [svgStyle]="{ 'width.px':7 }"></svg-icon>
+                    <span class="ml-10">back</span>
                 </button>
             </div>
             <app-talent-details [talent]="talentService.selectedTalent"></app-talent-details>

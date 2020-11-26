@@ -1,10 +1,11 @@
 .icon-input {
   position: relative;
-  bi {
+  svg-icon {
     position: absolute;
-    left: 30px;
+    left: 15px;
   }
   input {
+    padding-left: 45px;
   }
 }
 
