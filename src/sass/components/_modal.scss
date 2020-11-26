@@ -13,6 +13,8 @@ $btn-font-size: $font-size-sm;
 
 .modal-dialog {
     margin: 0 !important;
+    max-width: initial !important;
+    
     .modal-content {
         height: 100vh;
         border: 0;
@@ -20,9 +22,11 @@ $btn-font-size: $font-size-sm;
     }
 }
 
-@media only screen and (min-width: $sm) {
+@media only screen and (min-width: $lg) {
     .modal-dialog {
         margin: 1.75rem auto !important;
+        max-width: 600px !important;
+      
         .modal-content {
             height: auto;
             border: initial;
