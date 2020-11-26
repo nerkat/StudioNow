@@ -1,12 +1,12 @@
 # StudioNow
 
-## Icons
+###### JS Framework
 This project was developed with [Bootstrap](https://getbootstrap.com/) version 4.5.
 
-###### Icons
+###### UI Framework
 This project was developed with [ng-bootstrap](https://ng-bootstrap.github.io/) version 8.0.0.
 
-###### Icons
+###### Bootstrap Angular Wrapper Library
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
 
 ###### Icons
