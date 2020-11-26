@@ -1,0 +1,72 @@
+<div class="card rounded-lg">
+    <div class="card-body pb-16 row">
+        <div class="pr-0 ml-20">
+            <img width="80px" src="{{talent.image}}" alt="...">
+        </div>
+        <div class="col align-items-start d-flex flex-column">
+            <span
+                class="badge text-white mt-4 mb-8 badge-{{talent.plan | plan2color}}">{{talent.plan}}</span>
+            <strong class="card-title mb-0">{{talent.name}}</strong>
+            <strong class="card-text text-muted">{{talent.title}}</strong>
+        </div>
+        <div class="mr-15 ml-20 d-flex flex-column justify-content-between align-items-end">
+            <button type="button" class="btn btn-success mt-18 mr-3">Send Proposal</button>
+        </div>
+    </div>
+    <nav ngbNav #nav="ngbNav" class="nav-tabs pl-20">
+        <ng-container ngbNavItem>
+            <a ngbNavLink>About</a>
+            <ng-template ngbNavContent>
+                <div class="p-25">
+                    <dl class="row text-nowrap">
+                        <dt class="col-sm-3">Portfolio</dt>
+                        <dt class="col-sm-9"><a
+                                href="{{talent.about.portfolio}}">{{talent.about.portfolio}}</a>
+                        </dt>
+                        <dt class="col-sm-3">Email</dt>
+                        <dt class="col-sm-9"><a
+                                href="mailto:{{talent.about.email}}">{{talent.about.email}}</a>
+                        </dt>
+                        <dt class="col-sm-3">Phone</dt>
+                        <dt class="col-sm-9">{{talent.about.phone}}</dt>
+                        <dt class="col-sm-3">Location</dt>
+                        <dt class="col-sm-9">{{talent.about.location}}</dt>
+                    </dl>
+                    <hr />
+                    <div class="mb-20">
+                        <h6 class="mt-30 mb-12">Skills:</h6>
+                        <span class="badge badge-light mr-10 mb-10 py-4 px-7"
+                            *ngFor="let skill of talent.skills">{{skill}}</span>
+                    </div>
+                    <hr />
+                    <div>
+                        <h6 class="mt-30 mb-12"> Experience:</h6>
+                        <span class="badge badge-light mr-15 mb-10 py-5 px-10"
+                            *ngFor="let client of talent.experience">
+                            <img class="mr-10" width="30px"
+                                src="assets/images/{{client | brand2logo }}.png" />{{client}}</span>
+                    </div>
+                </div>
+            </ng-template>
+        </ng-container>
+        <ng-container ngbNavItem>
+            <a ngbNavLink>Producer Notes</a>
+            <ng-template ngbNavContent>
+                <div *ngFor="let note of talent.producerNotes" class="p-20">
+                    <div class="d-flex justify-content-between mb-15">
+                        <span>{{note.name}}</span>
+                        <span class="font-size-xs mt-5 text-muted">{{note.date}}</span>
+                    </div>
+                    <div class="font-size-sm mb-25 text-muted">{{note.text}}</div>
+                    <hr />
+                </div>
+                <div class="p-20 d-flex justify-content-end">
+                    <button type="button" class="btn btn-primary">Add Note</button>
+                </div>
+            </ng-template>
+        </ng-container>
+    </nav>
+
+    <div [ngbNavOutlet]="nav"></div>
+
+</div>

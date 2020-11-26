@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { TalentsListComponent } from './talents-list/talents-list.component';
+import { TalentsListComponent } from './pages/talents-list/talents-list.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 

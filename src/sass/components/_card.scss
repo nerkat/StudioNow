@@ -1,19 +1,24 @@
 .card {
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: auto;
+    bottom: 0;
+    width: 6px;
+    background-color: $primary;
+    transition: $transition-fade;
+    opacity: 0;
+  }
   &.selected {
     overflow: hidden;
     &:before {
-      content: "";
-      display: block;
-      position: absolute;
-      top: 0;
-      right: 0;
-      left: auto;
-      bottom: 0;
-      background-color: $primary;
-      width: 6px;
+      opacity: 1;
     }
   }
-  .card-text{
+  .card-text {
     font-size: $font-size-sm;
   }
 }

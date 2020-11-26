@@ -1,3 +1,20 @@
-<div class="container">
-  <router-outlet></router-outlet>
-</div>
+<!-- Container for sidebar(s) + page content -->
+<ng-sidebar-container>
+
+  <!-- sidebar -->
+  <ng-sidebar [(opened)]="sidebarService.isOpen" showBackdrop="true" position="right" closeOnClickBackdrop="true">
+    <app-sidebar></app-sidebar>
+  </ng-sidebar>
+
+  <!-- Page content -->
+  <div ng-sidebar-content>
+    <!-- app header -->
+    <app-header></app-header>
+
+    <!-- content container & router outlet -->
+    <div class="container px-30">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+
+</ng-sidebar-container>

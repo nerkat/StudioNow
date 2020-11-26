@@ -1,0 +1,17 @@
+.nav-tabs {
+  .nav-link {
+    padding-bottom: 18px;
+    padding-left: 5px;
+    border: 0 !important;
+    margin-right: 28px;
+
+    &.active {
+      border-bottom: solid !important;
+    }
+  }
+}
+
+$nav-tabs-link-active-color: $primary;
+$nav-tabs-link-active-border-color: $primary;
+$nav-tabs-link-hover-border-color: transparent;
+$nav-tabs-border-width: 3px;

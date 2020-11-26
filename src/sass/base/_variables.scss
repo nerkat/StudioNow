@@ -8,11 +8,39 @@ $warning: #ff8311;
 $info: #8a4fff;
 $success: #20cc67;
 
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
+
+$blue:    #007bff !default;
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #e83e8c !default;
+$red:     #dc3545 !default;
+$orange:  #fd7e14 !default;
+$yellow:  #ffc107 !default;
+$green:   #28a745 !default;
+$teal:    #20c997 !default;
+$cyan:    #17a2b8 !default;
+
 // text-colors
 $text-muted: #22222299;
 
 // layout color
 $body-color: #222222;
+
+// transitions
+$transition-base: all 0.2s ease-in-out !default;
+$transition-fade: opacity 0.15s linear !default;
+$transition-collapse: height 0.35s ease !default;
 
 // fonts
 $font-family-sans-serif: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans",
@@ -23,20 +51,30 @@ $font-size-xs: 12px;
 $font-weight-normal: 500;
 
 // font size helpers
-.font-size-sm{
- font-size: $font-size-sm !important;
+.font-size-sm {
+  font-size: $font-size-sm !important;
 }
 
-.font-size-xs{
+.font-size-xs {
   font-size: $font-size-xs !important;
- }
+}
+
+
+//  breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
 
 // container sizes trough breakpoints
 $container-max-widths: (
-  sm: 540px,
-  md: 720px,
-  lg: 960px,
-  xl: 1240px,
+  sm: 100%,
+  md: 100%,
+  lg: 1100px,
+  xl: 1300px,
 );
 
 // spacers sizes
@@ -62,5 +100,3 @@ $spacers: (
 $border-radius: 3px;
 $border-radius-lg: 4px;
 $border-radius-sm: 2px;
-
-

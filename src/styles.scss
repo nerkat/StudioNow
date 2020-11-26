@@ -1,12 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+html,
+body {
+    height: 100%;
+}
 
 // base
-@import 'sass/base/variables';
+@import "sass/base/variables";
 
 // components
-@import 'sass/components/card';
-@import 'sass/components/badge';
-@import 'sass/components/btn';
+@import "sass/components/card";
+@import "sass/components/badge";
+@import "sass/components/btn";
+@import "sass/components/tabs";
+@import "sass/components/sidebar";
+@import "sass/components/input";
 
 /* Importing Bootstrap SCSS file. */
-@import '~bootstrap/scss/bootstrap';
+@import "~bootstrap/scss/bootstrap";

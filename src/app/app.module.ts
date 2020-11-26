@@ -4,22 +4,34 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { TalentsListComponent } from './talents-list/talents-list.component';
+import { TalentsListComponent } from './pages/talents-list/talents-list.component';
 import { plan2color } from './pipes/plan2color.pipe';
 import { brand2logo } from './pipes/brand2logo.pipe';
 import { HttpClientModule } from '@angular/common/http';
+import { TalentCardComponent } from './components/talent-card/talent-card.component';
+import { TalentDetailsComponent } from './components/talent-details/talent-details.component';
+import { HeaderComponent } from './components/header/header.component';
+import { IconsModule } from './icons/icons.module';
+import { SidebarModule } from 'ng-sidebar';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TalentsListComponent,
     plan2color,
-    brand2logo
+    brand2logo,
+    TalentCardComponent,
+    TalentDetailsComponent,
+    HeaderComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
+    IconsModule,
+    SidebarModule,
     NgbModule
   ],
   providers: [],
