@@ -1,9 +1,9 @@
 # StudioNow
 
-###### UI Framework
+###### JS Framework
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
 
-###### JS Framework
+###### UI Framework
 This project was developed with [Bootstrap](https://getbootstrap.com/) version 4.5.
 
 ###### Bootstrap Angular Wrapper Library
