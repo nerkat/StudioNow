@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
@@ -7,10 +7,24 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./notes-modal.component.scss']
 })
 export class NotesModalComponent implements OnInit {
+  @Input() talent;
 
   constructor(public activeModal: NgbActiveModal) { }
 
   ngOnInit(): void {
+  }
+
+  close = function (note) {
+      this.talent.producerNotes.push({
+      name: 'Some User',
+      date: '6/27/20',
+      text: note
+    })
+
+
+
+
+    this.activeModal.close();
   }
 
 }
