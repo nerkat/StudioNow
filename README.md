@@ -6,10 +6,10 @@ This project was developed with [ng-bootstrap](https://ng-bootstrap.github.io/) 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
 
-<b>Icons<b><br>
+***Icons***
 This project was developed with [angular-svg-icon](https://github.com/czeckd/angular-svg-icon) version 11.0.0.
 
-<b>Sidebar<b><br>
+***Sidebar***
 This project was developed with [ng-sidebar](https://github.com/arkon/ng-sidebar) version 9.4.2.
 
 
