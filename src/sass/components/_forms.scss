@@ -1,0 +1,73 @@
+.icon-input {
+  position: relative;
+  bi {
+    position: absolute;
+    left: 30px;
+  }
+  input {
+  }
+}
+
+select.form-control {
+  height: 46px;
+  padding: 9px 6px;
+}
+
+$input-bg: #f6f6f6;
+
+.custom-checkbox {
+  background-color: $input-bg;
+  padding: 10px;
+  padding-left: 36px !important;
+  border-radius: 3px;
+  border: 1px solid $gray-400;
+
+  label {
+    padding-left: 10px;
+    display: block;
+  }
+
+  .custom-control-label::before {
+    border-radius: 2px !important;
+    border-width: 2px;
+    width: 20px;
+    height: 20px;
+    top: 3px;
+  }
+  .custom-control-input:checked ~ .custom-control-label::after {
+    width: 20px;
+    height: 20px;
+    background-size: 14px;
+  }
+
+  &.ribbon {
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: -1px;
+      right: -2px;
+      left: auto;
+      bottom: -1px;
+      width: 10px;
+      border-radius: 0 $border-radius-lg $border-radius-lg 0;
+    }
+
+    &.ribbon-info {
+      &::before {
+        background-color: $info;
+      }
+    }
+    &.ribbon-warning {
+      &::before {
+        background-color: $warning;
+      }
+    }
+    &.ribbon-danger {
+      &::before {
+        background-color: $danger;
+      }
+    }
+  }
+}
