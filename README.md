@@ -1,20 +1,19 @@
 # StudioNow
 
+###### UI Framework
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
+
 ###### JS Framework
 This project was developed with [Bootstrap](https://getbootstrap.com/) version 4.5.
 
-###### UI Framework
-This project was developed with [ng-bootstrap](https://ng-bootstrap.github.io/) version 8.0.0.
-
 ###### Bootstrap Angular Wrapper Library
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
+This project was developed with [ng-bootstrap](https://ng-bootstrap.github.io/) version 8.0.0.
 
 ###### Icons
 This project was developed with [angular-svg-icon](https://github.com/czeckd/angular-svg-icon) version 11.0.0.
 
 ###### Sidebar
 This project was developed with [ng-sidebar](https://github.com/arkon/ng-sidebar) version 9.4.2.
-
 
 ## Development server
 
