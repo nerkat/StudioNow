@@ -12,9 +12,10 @@
             <button type="button" class="btn btn-success mt-18 mr-3">Send Proposal</button>
         </div>
     </div>
-    <div class="alert alert-secondary d-flex align-items-center justify-content-center font-size-sm mx-20 py-9 text-muted" role="alert">
+    <div class="alert alert-secondary d-flex align-items-center justify-content-center font-size-sm mx-20 py-9 text-muted"
+        role="alert">
         <svg-icon src="assets/icons/info.svg" [svgStyle]="{ 'width.px':16 }"></svg-icon>
-        <span class="ml-10">You’ve worked with <strong>Jonathan</strong> before!</span>
+        <span class="ml-10">You’ve worked with <strong>{{(talent.name.split(' '))[0]}}</strong> before!</span>
     </div>
     <nav ngbNav #nav="ngbNav" class="nav-tabs pl-20">
         <ng-container ngbNavItem>
@@ -56,7 +57,7 @@
                     <div class="d-flex justify-content-between mb-15">
                         <div>
                             <span>{{note.name}}</span>
-                            <a [class.show]="note.showEditLink" href="#" class="pl-12 fade">Edit</a>
+                            <a [class.show]="note.showEditLink" (click)="open(talent, note)" class="pl-12 fade">Edit</a>
                         </div>
                         <span class="font-size-xs mt-5 text-muted">{{note.date}}</span>
                     </div>

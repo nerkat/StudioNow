@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ModalDismissReasons, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { NotesModalComponent } from '../modals/notes-modal/notes-modal.component';
 
 @Component({
@@ -13,9 +13,9 @@ export class TalentDetailsComponent implements OnInit {
 
   closeResult = '';
 
-  open(talent) {
+  open(talent, note) {
     const modalRef = this.modalService.open(NotesModalComponent)
-    modalRef.componentInstance.talent = talent;
+    modalRef.componentInstance.note = note;
   }
 
 

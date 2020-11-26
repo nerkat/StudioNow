@@ -6,12 +6,12 @@
         <div class="form-group">
             <label for="dateOfBirth">Date of birth</label>
             <div class="input-group">
-                <textarea class="form-control bg-white font-size-sm p-15" #note placeholder="Note" required rows="6"></textarea>
+                <textarea class="form-control bg-white font-size-sm p-15" [value]="textVal" #text placeholder="Note" required rows="6"></textarea>
             </div>
         </div>
     </form>
 </div>
 <div class="modal-footer border-0">
     <button type="button" class="btn btn-secondary" (click)="activeModal.close()">Cancel</button>
-    <button type="button" class="btn btn-success" (click)="close(note.value)">Submit Note</button>
+    <button type="button" class="btn btn-success" (click)="close(text.value)">Submit Note</button>
 </div>
