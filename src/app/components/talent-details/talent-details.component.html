@@ -12,6 +12,10 @@
             <button type="button" class="btn btn-success mt-18 mr-3">Send Proposal</button>
         </div>
     </div>
+    <div class="alert alert-secondary d-flex align-items-center justify-content-center font-size-sm mx-20 py-9 text-muted" role="alert">
+        <svg-icon src="assets/icons/info.svg" [svgStyle]="{ 'width.px':16 }"></svg-icon>
+        <span class="ml-10">You’ve worked with <strong>Jonathan</strong> before!</span>
+    </div>
     <nav ngbNav #nav="ngbNav" class="nav-tabs pl-20">
         <ng-container ngbNavItem>
             <a ngbNavLink>About</a>
@@ -47,9 +51,13 @@
         <ng-container ngbNavItem>
             <a ngbNavLink>Producer Notes</a>
             <ng-template ngbNavContent>
-                <div *ngFor="let note of talent.producerNotes" class="p-20">
+                <div *ngFor="let note of talent.producerNotes" class="p-20" (mouseenter)="note.showEditLink=true"
+                    (mouseleave)="note.showEditLink=false">
                     <div class="d-flex justify-content-between mb-15">
-                        <span>{{note.name}}</span>
+                        <div>
+                            <span>{{note.name}}</span>
+                            <a [class.show]="note.showEditLink" href="#" class="pl-12 fade">Edit</a>
+                        </div>
                         <span class="font-size-xs mt-5 text-muted">{{note.date}}</span>
                     </div>
                     <div class="font-size-sm mb-25 text-muted">{{note.text}}</div>
