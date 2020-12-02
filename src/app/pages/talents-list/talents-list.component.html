@@ -1,9 +1,19 @@
-<div class="row no-gutters">
+<div class="row no-gutters" *ngIf="!talents">
     <div class="col-lg-7">
         <app-talent-card *ngFor="let talent of talents" (click)="onSelect(talent)" [talent]="talent"></app-talent-card>
     </div>
     <div class="col pl-30 d-none d-lg-block" *ngIf="talentService.selectedTalent">
         <app-talent-details [talent]="talentService.selectedTalent"></app-talent-details>
+    </div>
+</div>
+
+<div class="row no-gutters" *ngIf="!talents">
+    <div class="col-12 text-center mt-20 mt-lg-40">
+        <svg-icon src="assets/images/search-graphic.svg" svgClass="w-100"></svg-icon>
+        <h4 class="mb-15 mt-5">Looking for something?</h4>
+        <p class="m-auto">You can search by name or skill in the search bar above. If you’re looking for filters like
+            location, talent
+            level, or others, that can be found select the top right button labeled ‘filters’</p>
     </div>
 </div>
 

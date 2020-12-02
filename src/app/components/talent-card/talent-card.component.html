@@ -16,7 +16,7 @@
             <div class="d-block d-lg-none">
                 <span class="mr-3"
                     *ngFor="let client of talent.experience | slice:0:3; first as isFirst">
-                    <img width="24px" src="assets/images/{{client | brand2logo }}.png" />
+                    <img width="24px" src="assets/images/logos/{{client | brand2logo }}.png" />
                 </span>
             </div>
             <a class="mb-9 mr-5 d-none d-lg-block" href="{{talent.about.portfolio}}">View Website</a>
@@ -26,7 +26,7 @@
         <span>Main Clients:</span>
         <span class="badge badge-light ml-11 text-muted" *ngFor="let client of talent.experience | slice:0:3; first as isFirst">
             <span *ngIf="!isFirst" class="mr-16">|</span>
-            <img width="30px" src="assets/images/{{client | brand2logo }}.png" />
+            <img width="30px" src="assets/images/logos/{{client | brand2logo }}.png" />
             {{client}}
         </span>
     </div>

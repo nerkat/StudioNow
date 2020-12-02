@@ -10,8 +10,8 @@ import { TalentService } from 'src/app/data/talent.service';
 })
 export class TalentsListComponent implements OnInit {
 
-  talents = TALENTS;
-
+  // talents = TALENTS;
+  talents;
 
   selectedTalent;
 
